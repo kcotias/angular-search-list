@@ -1,10 +1,24 @@
 <div class="container">
   <div class="row">
-    <app-movie></app-movie>
-    <app-movie></app-movie>
-    <app-movie></app-movie>
-    <app-movie></app-movie>
-    <app-movie></app-movie>
-    <app-movie></app-movie>
+    <div class="col s4 mt" *ngFor="let element of movieList">
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" ng-src="http://www.gravatar.com/avatar/{{hash}}"> </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">{{element.title}}<i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{element.title}}<i class="material-icons right">close</i></span>
+          <p>{{element.overview}}</p>
+          <button (click)="myModal.open()">View More</button>
+        </div>
+      </div>
+    </div>
+
+    <ngx-smart-modal #myModal identifier="myModal">
+      <h1>Hello!</h1>
+      <p>It's not perfect, but i did my best, i really want this job, thank you for your time!</p>
+      <button (click)="myModal.close()">Close</button>
+    </ngx-smart-modal>
   </div>
 </div>
