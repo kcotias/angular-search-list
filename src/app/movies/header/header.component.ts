@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from '../services';
+
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private movieService: MovieService) { }
 
   ngOnInit() {
+  }
+
+  showMovies(search: string) {
+    this.movieService.getMovies(search)
+      .subscribe((data) => this.data = {
+        page: data['page']
+      });
   }
 
 }
