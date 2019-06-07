@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 
+
 import { AppComponent } from './app.component';
 import { MoviesModule } from './movies'
 

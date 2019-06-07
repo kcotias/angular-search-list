@@ -3,7 +3,8 @@
     <div class="col s4 mt" *ngFor="let element of movieList">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" ng-src="http://www.gravatar.com/avatar/{{hash}}"> </div>
+          <img class="activator" src="{{element.poster_path}}">
+        </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">{{element.title}}<i class="material-icons right">more_vert</i></span>
         </div>
