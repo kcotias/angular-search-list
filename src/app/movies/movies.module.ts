@@ -2,15 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MovieComponent } from './movie/movie.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
+
 
 @NgModule({
   declarations: [MovieComponent, MovieListComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    NgxSmartModalModule.forRoot()
+
   ],
   exports: [
     MovieComponent,
-    MovieListComponent
+    MovieListComponent,
+
   ]
 })
 export class MoviesModule { }
