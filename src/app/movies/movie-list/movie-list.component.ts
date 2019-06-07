@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class MovieListComponent implements OnInit {
 
-  constructor(private movieService: MovieService) { }
+  constructor() { }
 
   ngOnInit() {
   }

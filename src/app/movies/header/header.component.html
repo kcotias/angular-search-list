@@ -1,11 +1,13 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper purple darken-4">
-      <a href="#!" class="brand-logo right mr">Movie List</a>
-      <form onsubmit="showMovies()">
+      <a href="#!" class="brand-logo right mr30">Movie List</a>
+      <form (ngSubmit)="showMovies()">
         <div class="input-field" style="max-width: 800pt;">
-          <input placeholder="Search for your favorite movies..." id="search" type="search" required>
+          <input name="title" [(ngModel)]="search" placeholder="Search for your favorite movies..." id="search" type="search"
+            required>
           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i (click)="showMovies(search)" class="material-icons mr40">check</i>
           <i class="material-icons">close</i>
         </div>
       </form>

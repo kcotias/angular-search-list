@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MovieService } from '../services';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MovieService, Movie } from '../services';
 
 
 @Component({
@@ -11,12 +11,14 @@ export class HeaderComponent implements OnInit {
 
   constructor(private movieService: MovieService) { }
 
+  search: String;
+
   ngOnInit() {
   }
 
-  showMovies(search: string) {
-    this.movieService.getMovies(search)
-      .subscribe((data) => this.data = {
+  showMovies() {
+    this.movieService.getMovies(this.search)
+      .subscribe((data) => data = {
         page: data['page']
       });
   }
