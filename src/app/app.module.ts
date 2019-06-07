@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header';
+import { MoviesModule } from './movies'
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { HeaderModule } from './header';
   ],
   imports: [
     BrowserModule,
-    HeaderModule
+    HeaderModule,
+    MoviesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
