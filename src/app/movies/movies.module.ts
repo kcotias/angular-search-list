@@ -4,6 +4,7 @@ import { HeaderComponent } from './header';
 import { MovieComponent } from './movie/movie.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
+import { MovieService } from './services';
 
 
 @NgModule({
@@ -21,6 +22,9 @@ import { NgxSmartModalModule } from 'ngx-smart-modal';
     MovieComponent,
     MovieListComponent,
     HeaderComponent
+  ],
+  providers: [
+    MovieService
   ]
 })
 export class MoviesModule { }
